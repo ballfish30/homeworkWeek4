@@ -1,5 +1,4 @@
 <?php
-session_start();
 if (isset($_POST["btnHome"]))
 {
 	header("Location: index.php");
@@ -11,9 +10,8 @@ if (isset($_POST["btnOK"]))
 	$sUserName = $_POST["txtUserName"];
 	if (trim($sUserName) != "")
 	{
-    $_SESSION["userName"]=$sUserName;
-    echo($_SESSION["userName"]);
-		// header("Location: index.php");
+		setcookie("userName", $sUserName);
+		header("Location: index.php");
 		exit();
 	}
 }
