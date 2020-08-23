@@ -13,7 +13,7 @@ if (isset($_POST["btnOK"]))
 	{
     $_SESSION["userName"]=$sUserName;
     echo($_SESSION["userName"]);
-		// header("Location: index.php");
+		header("Location: index.php");
 		exit();
 	}
 }
