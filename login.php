@@ -6,6 +6,10 @@ if (isset($_POST["btnHome"]))
 	exit();
 }
 
+if (isset($_GET["logout"])){
+  unset($_SESSION["userName"]);
+}
+
 if (isset($_POST["btnOK"]))
 {
 	$sUserName = $_POST["txtUserName"];

@@ -1,10 +1,13 @@
 <?php 
   session_start();
-  if (!isset($_SESSION["userName"]))
+  if (!isset($_SESSION["userName"])){
     $sUserName = "Guest";
-  else
+  }
+  else{
     $sUserName = $_SESSION["userName"];
-  echo $_SESSION["userName"]
+  }
+    
+    
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
